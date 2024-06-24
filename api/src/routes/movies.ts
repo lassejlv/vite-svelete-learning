@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { FetchMovies } from "src/utils/movie";
+import { FetchMovies } from "../utils/movie";
 
 export const movie = new Hono();
 

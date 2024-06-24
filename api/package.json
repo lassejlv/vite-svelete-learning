@@ -1,7 +1,6 @@
 {
   "name": "nodejs-typescript-starter",
   "version": "1.0.0",
-  "type": "module",
   "main": "dist/main.js",
   "scripts": {
     "dev": "tsx watch src/main.ts",
