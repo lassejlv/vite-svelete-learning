@@ -8,8 +8,8 @@ import { movie } from "./routes/movies";
 const app = new Hono();
 
 // Middleware
-app.use(cors({ origin: process.env.CORS_ORIGIN!, allowHeaders: ["GET"] }));
-app.use(logger());
+app.use(cors({ origin: process.env.CORS_ORIGIN!, allowMethods: ["GET"] }));
+if (process.env.NODE_ENV === "dev") app.use(logger());
 
 app.basePath("/api").route("/movies", movie);
 

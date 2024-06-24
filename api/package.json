@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-typescript-starter",
+  "name": "api",
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "@types/node": "^20.14.8",
     "dotenv": "^16.4.5",
     "hono": "^4.4.7",
+    "ioredis": "^5.4.1",
     "tsx": "^4.15.7",
     "typescript": "^5.5.2"
   }
