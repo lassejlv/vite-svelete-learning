@@ -1,4 +1,4 @@
-FROM node:lts as runtime
+FROM node:latest as runtime
 
 
 WORKDIR /app
