@@ -6,6 +6,10 @@ export const movie = new Hono();
 
 movie.get("/random", async (c) => {
   try {
+    // Rate limiter
+    const userIp = c.req.raw.headers.get("X-Forwarded-For");
+    console.log(userIp);
+
     const movies = await FetchMovies({ multiple: true });
 
     if (!movies) throw new Error("No movies found");

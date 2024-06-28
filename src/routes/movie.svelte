@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import { API_URL } from "../lib";
   import type { Movie } from "../types/Movie";
-  import Spinner from "../lib/Spinner.svelte";
 
   let data: Movie | null = null;
 
@@ -17,15 +16,13 @@
 </script>
 
 {#if loading}
-  <p>
-    <Spinner />
-  </p>
+  <p>Loading....</p>
 {:else if data}
   <div class="flex flex-col items-center justify-center">
     <img src={data.image_full_url} class="w-1/4" alt={data.id} loading="lazy" />
 
     {#if data.cached}
-      <p class="text-xs text-red-500">Cached</p>
+      <p class="text-xs text-lime-500">Cached</p>
     {/if}
 
     <h3 class="text-lg font-semibold mt-2">{data.title}</h3>
