@@ -1,9 +1,44 @@
-# Movie Swiper.
+# Teknologien forklaret
 
-Jeg har valgt og prøve javascript frameworket Svelte. Da jeg har aldrig har prøvet det før. Men kan ligeså godt sige det. Det noget være bras. React er bare bedere.
+Jeg har valgt og prøve javascript frameworket Svelte. Det er ligesom react. Bare lavet på en andet måde, der er lidt mere simpelt. Det også meget hurtigere and react fordi svelte har en compiler. Så svelte ved hvad den skal opdater og ikke ligesom react. Der opdater alt når du laver en ændring i en state.
 
-Men det var så vel sjovt at prøve noget nyt. Men så til ideen. Det en ret simpel ide. En hjemmeside hvor man kan "swipe" / gennemgå random film. Lidt ligesom tinder. Man kan så ved være film vælge om man vil tilføje den til sin se-liste. Ret simpelt.
+# Formål med teknologien
 
-Jeg kunne ikke rigtigt finde en api der kunne sende random film. Så jeg byggede min ejen. (kan findes i `api` mappen). Jeg har brugt "TheMovieDB" api til at finde filmene. Jeg har så brugt `/api/popular` endpointet til at finde de mest populære film. Og så har man et side nr fordi der er ret mange film. `?page{nr}` Så jeg lavede en function der gav et random film side nummer. Også tog jeg bare film fra den side og så sende filmene tilbage.
+Formålet er nok at det skulle være nemmere og mere sjovt at bruge svelte frem for react. Fordi det ikke har så mange lige gyldige ting som react, når det kommer til at du skal fetche noget. Så skal du bruge `useFetch`. Men det behøver du ikke i svelte.
 
-Backenden er skrevet i typescript, med Hono. (en bedere version af express).
+Formålet ved svelte er også det har en compiler. Det at det har en compiler gør dit javascript meget mindre. Så det hele bliver hurtigere.
+
+# Anvedelsesområder (eks. design, styling, scripting, animationer osv.)
+
+For styling valgte jeg at bruge `Tailwind CSS` fordi det er meget nemt at bruge, og fordi jeg føler mig meget mere produktiv med det. 
+
+# Eventuelle forbedringer eller ønsker til teknologien
+
+Ja jeg kan ligeså godt sige det. Svelte er smart fordi det er nemere. Men synes sku hurigt det blev meget forvirende. 1. Fordi det havde dets eget syntax. `.svelte` filer. Hvor på jeg var vandt til at bruge jsx. 
+
+Eksempel for if statement react vs svelte:
+
+JSX:
+```js
+function MyComponent({ isVisible }) {
+  return (
+    <div>
+      {isVisible ? <p>Visible Content</p> : null}
+    </div>
+  );
+}
+```
+
+Svelte:
+```svelte
+<script>
+  export let isVisible;
+</script>
+
+{#if isVisible}
+  <p>Visible Content</p>
+{/if}
+```
+
+Synes det blev meget forvirende. Også hvordan det hele var sat op. Router osv var meget mærkeligt. Men trods det trældse. Så synes jeg alligevel at det kunne noget at lære noget nyt. Og vil være frisk på at gøre det igen!
+
